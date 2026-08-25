@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import {
   getFirestore,
   doc,
@@ -11,19 +12,25 @@ import {
   documentId,
 } from "firebase/firestore";
 
-// 1. Go to https://console.firebase.google.com -> Add project (free).
-// 2. Build > Firestore Database > Create database > Start in test mode.
-// 3. Project settings (gear icon) > General > "Your apps" > Web app (</>) > copy the config below.
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyBrxV7O0odbmthjAgvexzQYpDq0C9dIwI4",
+  authDomain: "e-learn-a33c1.firebaseapp.com",
+  projectId: "e-learn-a33c1",
+  storageBucket: "e-learn-a33c1.firebasestorage.app",
+  messagingSenderId: "113018352630",
+  appId: "1:113018352630:web:1f0fded270e0de593f4dd7",
+  measurementId: "G-761LQN4FX9"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const COLLECTION = "chalkcheck";
 

@@ -3,8 +3,7 @@
 A live classroom quiz/polling app. Host runs it from the front of the room;
 students join from their own phones with a 5-character code.
 
-This version talks to **Firebase Firestore** instead of Claude's artifact
-storage, so it runs as a normal static site — VS Code locally, GitHub Pages
+This version talks to **Firebase Firestore** , so it runs as a normal static site — VS Code locally, GitHub Pages
 in production, on your own domain.
 
 ## 1. Set up Firebase (free)
